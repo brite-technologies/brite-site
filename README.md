@@ -1,2 +1,2 @@
-# BriteWeb
+# Brite Website
 Landing Page
