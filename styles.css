@@ -1,0 +1,498 @@
+@font-face {
+  font-family: Inter;
+  src: url("./assets/fonts/Inter/Inter-VariableFont_slnt\,wght.ttf");
+  font-style: normal;
+}
+
+:root {
+  --blue: 76, 166, 250;
+  --dark-gray: 65, 65, 65;
+  --purple: 51, 51, 204;
+  --bright-purple: 80, 51, 204;
+  --navy: 0, 28, 109;
+  --lavender: 159, 183, 255;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Inter;
+  font-size: 16px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  padding: 0 10%;
+  overflow: hidden;
+}
+
+h1,
+.heading-1 {
+  font-size: 52px;
+  font-weight: 700;
+}
+
+h2,
+.heading-2 {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+p,
+.text-large {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.text-large-bold {
+  font-size: 24px;
+  font-weight: bold;
+}
+.text-medium {
+  font-size: 20px;
+  font-weight: 400;
+}
+.text-medium-bold {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.text-small {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.text-colored {
+  color: rgb(var(--blue));
+}
+
+.section-container-medium {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  padding: 0 10%;
+  overflow: auto;
+}
+
+.section-container-smaller {
+  position: relative;
+  width: 100%;
+  height: 40vh;
+  padding: 0 10%;
+  overflow: auto;
+}
+
+.cta-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5em 1em;
+  border-radius: 0.5em;
+  background-color: rgb(var(--purple)) !important;
+  color: #fff !important;
+  font-weight: 600;
+  text-decoration: none;
+}
+.cta-btn-white {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5em 1em;
+  border-radius: 0.5em;
+  background-color: white !important;
+  color: black !important;
+  font-weight: 600;
+  text-decoration: none;
+}
+.cta-btn-grey {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5em 1em;
+  border-radius: 0.5em;
+  color: #fff !important;
+  font-weight: 600;
+  text-decoration: none;
+  background-color: rgb(33, 28, 37) !important;
+}
+
+.cta-btn-grey:hover {
+  cursor: pointer;
+}
+
+.blue-text {
+  color: #4ca6fa;
+}
+.purple-text {
+  color: #3333cc;
+}
+.bright-purple-text {
+  color: #ffffff;
+}
+.white-text {
+  color: white;
+}
+.text-colored {
+  color: rgb(var(--blue));
+}
+
+.blue-background {
+  background-color: rgba(var(--blue), 0.1);
+}
+
+.dark-background {
+  color: white;
+  background-color: rgb(var(--dark-gray));
+}
+
+.blue-background {
+  color: black;
+  background-color: rgba(var(--blue), 0.1);
+}
+
+.lavender-background {
+  background-color: rgba(var(--lavender), 0.4);
+}
+
+/*             Transitions                */
+
+.hidden {
+  opacity: 0;
+  transition: all 1s;
+}
+
+.show {
+  opacity: 1;
+}
+
+.hidden-return {
+  /*separating from other hidden elements so that we can query for the ones we want to disappear when not in viewport */
+  opacity: 0;
+  transition: all 1s;
+}
+
+.show-return {
+  opacity: 1;
+}
+
+.hidden-slower {
+  /* Simply a slower transition */
+  opacity: 0;
+  transition: all 2s;
+}
+
+.show-slower {
+  opacity: 1;
+}
+
+.hidden-fly {
+  /*Items will fly into the viewport */
+  opacity: 0;
+  transition: all 1s;
+  transform: translateX(-100%);
+}
+
+.show-fly {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/*             Navigation             */
+
+nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 8px 10%;
+  z-index: 1;
+}
+
+nav a {
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo {
+  height: 3em;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2em;
+  list-style-type: none;
+  overflow: hidden;
+  transition: max-height 0.15s ease-in;
+  z-index: 1;
+}
+
+.nav-links a {
+  color: #000;
+  text-decoration: none;
+  transition: all 0.15s ease-in;
+  border-bottom: 2px solid rgb(var(--blue), 0);
+}
+.nav-links-white a {
+  color: white;
+  text-decoration: none;
+  transition: all 0.15s ease-in;
+  border-bottom: 2px solid rgb(var(--purple), 0);
+}
+
+.nav-links a:hover {
+  border-bottom: 2px solid rgb(var(--purple), 1);
+}
+
+#menu-check,
+.menu-bars {
+  display: none;
+}
+
+.menu-bars svg {
+  fill: #000;
+}
+#loginButton {
+  padding: 0.5em 2.5em;
+}
+#loginButton:hover {
+  cursor: pointer;
+}
+/*         Hero Section          */
+
+#hero-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px 0;
+  width: 100%;
+}
+
+.hero-text {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 32px;
+  width: 584px;
+  min-width: 500px;
+}
+
+/*          Contact             */
+
+#contact {
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 64px;
+  background-color: rgba(var(--lavender), 0.4);
+}
+
+.contact-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 32px;
+}
+
+#contact-header {
+  max-width: 600px;
+}
+
+/*          Footer              */
+
+#footer {
+  height: 20vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2em;
+  list-style-type: none;
+  overflow: hidden;
+  transition: max-height 0.15s ease-in;
+  z-index: 1;
+}
+
+.footer-links a {
+  color: #000;
+  text-decoration: none;
+  transition: all 0.15s ease-in;
+  border-bottom: 2px solid rgb(var(--blue), 0);
+}
+
+/*             Media Queries             */
+
+@media only screen and (max-width: 1200px) {
+}
+
+@media only screen and (max-width: 992px) {
+}
+
+@media only screen and (max-width: 850px) {
+  h1,
+  .heading-1 {
+    font-size: min(8vw, 48px);
+  }
+
+  h2,
+  .heading-2 {
+    font-size: min(7vw, 36px);
+  }
+
+  p,
+  .text-large {
+    font-size: 19px;
+  }
+
+  .text-medium {
+    font-size: 17px;
+  }
+  .text-small {
+    font-size: 12px;
+  }
+
+  .nav-logo {
+    height: 2em;
+  }
+
+  nav {
+    position: fixed;
+    background-color: white;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateX(100%);
+
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 16px;
+
+    width: 70vw;
+    max-width: 400px;
+    height: 100vh;
+    padding: 64px 32px 32px 32px;
+
+    background-color: #fff;
+    opacity: 0;
+    box-shadow: -4px 0 16px -2px rgba(0, 0, 0, 0.4);
+    transition: all 0.15s ease-in;
+  }
+
+  .nav-links li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .nav-links a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 12px 0;
+    border: none !important;
+    border-radius: 8px;
+    background-color: rgba(var(--blue), 0.1);
+  }
+
+  .bottom-link {
+    margin-top: auto;
+  }
+
+  #menu-check:checked ~ .nav-links {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  .menu-bars {
+    display: block;
+    width: 1.25em;
+    height: 1.25em;
+    z-index: 2;
+    cursor: pointer;
+  }
+
+  #contact-header {
+    display: none;
+  }
+  .footer-dis {
+    display: none;
+  }
+}
+
+/*          Scroll Transitions           */
+
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transition: all 1s;
+}
+.hidden-left,
+.hidden-right {
+  opacity: 0;
+  filter: blur(5px);
+  transition: all 1s;
+}
+
+.hidden-left {
+  transform: translateX(-100%);
+}
+
+.hidden-right {
+  transform: translateX(100%);
+}
+
+.show-left,
+.show-right {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0%);
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+}
+
+@media only screen and (max-width: 600px) {
+}
+
+@media (prefers-reduced-motion) {
+  .hidden-left,
+  .hidden-right {
+    transition: none;
+  }
+}

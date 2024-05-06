@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="CACHE-CONTROL" content="NO-CACHE" />
+
+    <title>About</title>
+    <link rel="icon" type="image/png" href="./favicon.png" />
+
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./about.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <nav>
+      <a href="./index.html">
+        <img class="nav-logo" src="./assets/images/newlogo.svg" alt="Brite" />
+      </a>
+
+      <input type="checkbox" id="menu-check" />
+      <label class="menu-bars" for="menu-check">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+          <!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+          <path
+            d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
+          />
+        </svg>
+      </label>
+
+      <ul class="nav-links">
+        <li>
+          <a href="./index.html">Home</a>
+        </li>
+        <li>
+          <a href="./advertising.html">Advertising Partners</a>
+        </li>
+        <li>
+          <a href="./about.html">About</a>
+        </li>
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
+        <li>
+          <a href="./index.html#request-a-demo" class="cta-btn-grey"
+            >Request a Demo</a
+          >
+        </li>
+        <li>
+          <a id="loginButton" class="cta-btn">Login</a>
+        </li>
+      </ul>
+    </nav>
+
+    <section id="hero-section">
+      <div class="hero-content">
+        <div class="hero-text hidden-left">
+          <h1>Our <span class="heading-1 purple-text">Mission</span></h1>
+          <p class="text-medium">
+            Feedback is essential for improvement, yet conventional approaches
+            for gathering feedback, particularly from students, lack
+            reliability.
+          </p>
+          <p class="text-medium">
+            We offer students a fresh platform to share their opinions,
+            challenges, and requirements, ensuring their voices are heard and
+            support is extended in a timely manner, preventing any potential
+            issues from escalating.
+          </p>
+        </div>
+        <img
+          id="aboutImg"
+          class="hidden-right"
+          src="assets/images/aboutLogo.svg"
+        />
+      </div>
+    </section>
+
+    <section class="hidden-left" id="readMore">
+      <div class="founders-content">
+        <div class="about-text hidden-left">
+          <h1>
+            Built By <span class="heading-1 purple-text">Current Students</span>
+          </h1>
+          <p class="text-medium">
+            As WVU engineering students, we were on the front lines of WVU’s
+            financial crisis stemming from the student enrollment cliff. After
+            many conversations with university administrators across the
+            country, we learned that enrollment and retention was an issue all
+            over.
+          </p>
+          <p class="text-medium">
+            This is why we started Brite – to bridge the gap between
+            universities and their students.
+          </p>
+          <p class="text-medium">
+            We strive to get students help surrounding mental health, financial
+            insecurities, family problems, and campus dilemmas by connecting
+            them with administrators who can allocate precious resources to the
+            right spots.
+          </p>
+        </div>
+        <img id="foundersImg" src="assets/images/foundersTCU.JPEG" />
+      </div>
+    </section>
+
+    <section id="contact">
+      <h1 id="contact-header">
+        <span class="purple-text heading-1">Brighten</span> Your Classroom
+        Experience
+      </h1>
+      <div class="contact-text">
+        <h2>Contact Us</h2>
+        <p class="text-medium">
+          To learn more, email us at
+          <a href="mailto: info@brite.company" class="text-medium email-link">
+            info@brite.company
+          </a>
+        </p>
+        <a
+          class="cta-btn"
+          id="DemoRequest"
+          href="https://docs.google.com/forms/d/e/1FAIpQLSegV-dowRuRsMFz-4bKpN9_NyclXzengPoBlK-sQn5bFZB3fQ/viewform"
+        >
+          Join Waitlist
+        </a>
+      </div>
+    </section>
+
+    <section id="footer">
+      <div>
+        <a href="./index.html">
+          <img class="nav-logo" src="./assets/images/newlogo.svg" alt="Brite" />
+        </a>
+      </div>
+      <div>
+        <ul class="footer-links">
+          <li>
+            <a href="./index.html" class="footer-dis">Home</a>
+          </li>
+          <li>
+            <a href="./advertising.html" class="footer-dis"
+              >Advertising Partners</a
+            >
+          </li>
+          <li>
+            <a href="./about.html" class="footer-dis">About</a>
+          </li>
+          <a
+            href="https://www.instagram.com/britemobile/"
+            class="fa fa-instagram"
+          ></a>
+          <a
+            href="https://www.linkedin.com/company/teambrite/"
+            class="fa fa-linkedin"
+          ></a>
+        </ul>
+      </div>
+    </section>
+    <script>
+      document
+        .getElementById("loginButton")
+        .addEventListener("click", function () {
+          // Change the URL to the desired website
+          window.location.href = "https://app.brite.company/"; // Replace with the website URL you want to redirect to
+        });
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>

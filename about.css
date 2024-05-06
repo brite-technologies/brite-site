@@ -1,0 +1,167 @@
+@font-face {
+  font-family: Inter;
+  src: url("./assets/fonts/Inter/Inter-VariableFont_slnt\,wght.ttf");
+  font-style: normal;
+}
+
+/*             Hero Section             */
+
+#hero-section {
+  height: 100vh;
+}
+.mission-text {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: left;
+  gap: 32px;
+}
+
+#aboutImg {
+  max-width: 40%;
+  padding-left: 32px;
+}
+
+/*        Read More Section         */
+
+#readMore {
+  background-color: rgba(var(--purple), 0.1);
+}
+.founders-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px 0;
+  height: 100%;
+}
+
+#foundersImg {
+  max-width: 50%;
+  padding-left: 32px;
+}
+
+.about-text {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 32px;
+}
+
+/*             Founders Section             */
+
+#founders {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#foundersHeader {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 64px;
+}
+
+#headshots {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.headshot,
+.headshot p {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.headshot img {
+  width: 80%;
+}
+
+/*             contact           */
+
+#contact .email-link {
+  color: black;
+}
+
+/*             Media Queries             */
+
+@media only screen and (max-width: 1200px) {
+  .hero-content {
+    flex-flow: column-reverse;
+  }
+
+  #aboutImg {
+    padding: 0 0 32px 0;
+    min-width: 400px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  #founders {
+    height: fit-content;
+    padding: 32px 0;
+  }
+
+  .founders-content {
+    flex-flow: column;
+    justify-content: center;
+  }
+
+  #foundersImg {
+    padding: 32px 0 0 0;
+    max-width: 80%;
+  }
+
+  #headshots {
+    flex-flow: column;
+  }
+
+  .headshot {
+    padding: 16px 0;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .hero-text {
+    width: auto;
+    min-width: auto;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #hero-section {
+    height: 100vh;
+  }
+
+  #readMore {
+    height: 100vh;
+  }
+
+  #aboutImg {
+    min-width: 200px;
+  }
+  #foundersImg {
+    display: none;
+  }
+  .about-text {
+    gap: 20px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  #hero-section {
+    height: 100vh;
+  }
+
+  #readMore {
+    height: 100vh;
+  }
+}
